@@ -1,0 +1,29 @@
+
+
+
+
+body {
+	margin: 0 auto;
+	font-family: "helvetica", sans-serif;
+	color: $dark;;
+}
+
+header {
+	padding: 20px 0;
+
+	a {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.wrapper {
+		width: 600px;
+		margin: 0 auto;
+	}
+
+
+div.success {
+	background: #000;
+	color: #fff;
+}

@@ -1,0 +1,43 @@
+
+<!-- Here we reference "@story" from the controller -->
+
+<h1><%= link_to @story.title, @story.url, target: "_blank" %></h1>
+<em><%= @story.url %></em>
+<p><%= @story.body %></p>
+
+
+<div class="story-options">
+	<!-- Add in dynamic story id with '@story' at end -->
+	<%= link_to "Add a comment", new_story_comment_path(@story) %>
+	<%= link_to "Feature this story", new_story_comment_path(@story) %>
+
+	<!-- 'edit_story_path' comes from helper in left hand col of rake routes + '_path' -->
+	<%= link_to "Edit", edit_story_path %>
+	<%= link_to "Delete", story_path(@story), method: :delete %>
+</div>
+
+
+<div class="comments">
+	<h2>Comments</h2>
+
+	<% if @comments.any? %>
+
+		<% @comments.each do |comment| %>
+			<div class="comment">
+
+				<!-- simple_format looks at the formating of the comment - adding carriage returns -->
+				<%= simple_format comment.body %>
+				<div class="time">
+					<%= time_ago_in_words comment.created_at %>
+				</div>
+			</div>
+		<% end %>
+
+	<% else %>
+
+		<p>No comments yet. You should <%= link_to "post one", new_story_comment_path(@story) %>.</p>
+
+	<% end %>
+
+
+</div>

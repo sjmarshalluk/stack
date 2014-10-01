@@ -1,0 +1,18 @@
+
+<!-- 'form_for' is the standard form. 'simple_form_for' is for the simple form gem -->
+
+
+<%= simple_form_for @story do |form| %>
+
+	<!-- usuall would use 'form.text_field' change for simple form -->
+	<!-- would also use '%= form.label :title %>' to generate form labels without simple form -->
+
+	<%= form.input :title, placeholder: "Title" %>
+	<!-- class adds css class, can be any attribute, eg 'alt'. html tags, eg <div> can also be placed around -->
+	<%= form.input :body, class: "body" %>
+	<%= form.input :url %>
+
+	<%= form.input :is_featured %>
+
+	<%= form.submit %>
+<% end %>

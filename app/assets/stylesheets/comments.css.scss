@@ -1,0 +1,23 @@
+
+div.comments {
+	border: 1px #eee solid;
+	color: #333;
+	padding: 20px;
+	margin-top: 2em;
+
+	h2 {
+		margin-top: 0;
+	}
+}
+
+div.comment {
+	padding-top: 20px;
+	margin-top: 20px;
+	border-top: 1px solid #eee;
+}
+
+div.time {
+	font-size: 12px;
+	font-color: #999;
+	font-style: italic;
+}

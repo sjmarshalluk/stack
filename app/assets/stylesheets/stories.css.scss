@@ -1,0 +1,65 @@
+// Place all the styles related to the stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+h1 {
+
+	a {
+		text-decoration: none;
+		color: #333;
+		border-bottom: 2px solid #333;
+	}
+}
+
+header {
+	margin: 20px 0;
+}
+
+header a {
+	color: #eb1234;
+}
+
+div.story {
+	margin-bottom: 4em;
+}
+
+div.input input,
+div.input textarea {
+	width: 400px;
+	float: right;
+	padding: 10px;
+}
+
+div.input {
+	padding: 20px;
+	width: 600px;
+}
+
+span.error {
+	display: block;
+	color: #333;
+	font-size: 12px;
+	padding: 10px;
+}
+
+.story-options {
+	font-size: 12px;
+	margin-top: 2em;
+
+	a {
+		padding-right: 10px;
+		text-decoration: none;
+	}
+}
+
+
+.upvote span {
+	background: #eee;
+	padding: 5px;
+	margin-right: 10px;
+	width: 30px;
+}

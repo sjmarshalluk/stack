@@ -1,0 +1,12 @@
+
+<%# param[:story_id] %>
+
+<!-- uses an array as its nested -->
+<%= simple_form_for [@story, @comment] do |f| %>
+
+	<%= f.input :body %>
+	<%# f.input :story_id %> 
+	
+	<%= f.button :submit %>
+
+<% end %>

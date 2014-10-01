@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stack</title>
+  <%= stylesheet_link_tag    'application' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<header>
+		<div class="wrapper">
+			<nav>
+				<%= link_to "Stack", stories_path %>
+				<%= link_to "Submit", new_story_path %>
+
+				<!-- GOing back to same page, but updated -->
+				<%= link_to "Recent", root_path(sort: "recent") %>
+				<%= link_to "Top", root_path(filter: "popular") %>
+				<%= link_to "Featured", root_path(filter: "featured") %>
+			</nav>
+		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<% flash.each do |the_flash_key, the_flash_value| %>
+
+			<div class="<%= the_flash_key %>">
+				<p><%= the_flash_value %></p>
+			</div>
+			
+		<% end %>
+
+		<%= yield %>
+	</div>
+
+</body>
+</html>

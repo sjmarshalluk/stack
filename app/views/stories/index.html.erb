@@ -1,0 +1,21 @@
+
+<!-- here we turn "@stories" (from the controller) into "story" with a block (a loop) -->
+
+
+<% @stories.each do |story| %>
+
+<!-- here we reference "story" from above -->
+	<div class="story">
+		<h1><%= link_to story[:title], story_path(story) %></h1>
+		<div class="upvote">
+			<span><%= story.votes.count %></span>
+			<%= link_to "Upvote", story_votes_path(story), method: :post %>
+			<%= link_to "Downvote", story_votes_path(story), method: :delete %>
+		</div>
+
+		<p><%= story[:body] %></p>
+		<%= link_to "Comments", story_path(story) %>
+	</div>
+
+<% end %>
+
