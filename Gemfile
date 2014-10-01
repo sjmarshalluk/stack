@@ -59,3 +59,6 @@ gem 'simple_form'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 
 gem 'devise'
+
+
+ruby '2.1.2'
